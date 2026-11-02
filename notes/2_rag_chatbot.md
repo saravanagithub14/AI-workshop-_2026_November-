@@ -378,5 +378,3 @@ Run it once with `python download_model.py`, then run `python rag_chatbot.py --i
 | Can make things up | Yes | Much less, because it must use the given text |
 | Needs a database | No | Yes (Chroma) |
 | Extra step before chatting | None | `python rag_chatbot.py --index` |
-
-**Next:** Part 3, where the AI writes your **portfolio assets** from your profile.

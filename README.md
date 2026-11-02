@@ -11,7 +11,6 @@ Instructor: Saravana Perumal, Senior Gen AI Engineer
 |---|---|---|---|
 | 1 | A basic AI chatbot that remembers the conversation | `chatbot.py` | [notes/1_chatbot.md](notes/1_chatbot.md) |
 | 2 | A RAG chatbot that answers from your own documents | `rag_chatbot.py` | [notes/2_rag_chatbot.md](notes/2_rag_chatbot.md) |
-| 3 | Personalized AI portfolio assets (LinkedIn, resume, GitHub README) | `portfolio_assets.py` | [notes/3_portfolio_assets.md](notes/3_portfolio_assets.md) |
 
 ## Before the workshop
 
@@ -40,14 +39,11 @@ Full setup steps and fixes for common errors are in [Part 1](notes/1_chatbot.md#
     python rag_chatbot.py --index      # Part 2: save docs/ into the database
     python rag_chatbot.py              # (or --web)
 
-    python portfolio_assets.py         # Part 3: writes files into portfolio/
-    python portfolio_assets.py --web
-
 Try in Part 2: "What did Asha build at her internship?" then "What is her favourite food?"
 The second one should get "I don't have that in my documents."
 
 ## Make it yours
 
-`docs/about_me.md` is a sample profile. Replace it with your own details, then run Part 2 and Part 3 again.
+`docs/about_me.md` is a sample profile. Replace it with your own details, then run `python rag_chatbot.py --index` again.
 
 **Never share your `.env` file or post your API key online.**
