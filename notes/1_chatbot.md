@@ -52,7 +52,7 @@ File: `chatbot.py`
 
 ## 2. One-time setup
 
-Do these steps once, inside the `Groq_Chatbots` folder.
+Do these steps once, inside the project folder.
 
 ### Step 1: Create a virtual environment
 
@@ -98,7 +98,7 @@ This installs:
 
 ### Step 5: Create the `.env` file
 
-Make a file called `.env` in the `Groq_Chatbots` folder with these two lines:
+Make a file called `.env` in the project folder with these two lines:
 
 ```
 GROQ_API_KEY=paste_your_key_here
@@ -309,7 +309,7 @@ Open that link in your browser. Press **Ctrl + C** in the terminal to stop the w
 | `ModuleNotFoundError: No module named 'groq'` | The virtual environment is not on | Run `.\.venv\Scripts\Activate.ps1`, then try again |
 | `running scripts is disabled on this system` | PowerShell is blocking the activate script | Run `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned` once |
 | `Error code: 401 ... Invalid API Key` | The key in `.env` is wrong | Copy the key again from console.groq.com. Check there are no spaces or quotes |
-| `The api_key client option must be set` | Python can't find your `.env` file | Make sure `.env` is in the `Groq_Chatbots` folder and you run the command from that folder |
+| `The api_key client option must be set` | Python can't find your `.env` file | Make sure `.env` is in the project folder and you run the command from that folder |
 | `Error code: 404 ... model ... does not exist` | That model name is old or wrong | Change `GROQ_MODEL` in `.env` to a model listed at console.groq.com/docs/models |
 | `Error code: 429 ... rate limit` | Too many requests too fast (free plan limit) | Wait a minute and try again |
 | Web page says port 7860 is in use | Another copy is already running | Gradio picks the next free port (7861, 7862...). Use the link it prints, or stop the old one with Ctrl + C |

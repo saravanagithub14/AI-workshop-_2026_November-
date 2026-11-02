@@ -329,7 +329,7 @@ Open the link it prints (for example `http://127.0.0.1:7860`). Press **Ctrl + C*
 | Problem | What it means | Fix |
 |---|---|---|
 | `No documents saved yet. Run: python rag_chatbot.py --index` | The database is empty | Run `python rag_chatbot.py --index` |
-| `Saved 0 paragraphs from 0 files.` | No `.txt` or `.md` files found | Put files in the `docs/` folder and run the command from the `Groq_Chatbots` folder |
+| `Saved 0 paragraphs from 0 files.` | No `.txt` or `.md` files found | Put files in the `docs/` folder and run the command from the project folder |
 | The bot doesn't know something you just added | The database still has the old version | Run `--index` again after **every** change to `docs/` |
 | Answers mix up topics | A paragraph is too long, or two topics share one paragraph | Add blank lines so each paragraph is about one thing, then re-index |
 | `UnicodeDecodeError` | The file isn't saved as UTF-8 | In VS Code, click the encoding in the bottom bar, then **Save with Encoding**, then **UTF-8** |
@@ -338,7 +338,7 @@ Open the link it prints (for example `http://127.0.0.1:7860`). Press **Ctrl + C*
 
 ### Fix: the embedding model won't download
 
-Chroma downloads its model from Amazon S3, which some college or office networks block. You can get the same model from Hugging Face instead. Save this as `download_model.py` in the `Groq_Chatbots` folder:
+Chroma downloads its model from Amazon S3, which some college or office networks block. You can get the same model from Hugging Face instead. Save this as `download_model.py` in the project folder:
 
 ```python
 import shutil
@@ -378,3 +378,5 @@ Run it once with `python download_model.py`, then run `python rag_chatbot.py --i
 | Can make things up | Yes | Much less, because it must use the given text |
 | Needs a database | No | Yes (Chroma) |
 | Extra step before chatting | None | `python rag_chatbot.py --index` |
+
+**Next:** Part 3, where the AI writes your **portfolio assets** from your profile.
