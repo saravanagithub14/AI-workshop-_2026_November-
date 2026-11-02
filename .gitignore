@@ -1,0 +1,23 @@
+# Virtual environment
+.venv/
+venv/
+
+# Secrets
+.env
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Chroma vector store (rebuilt by rag_chatbot.py)
+chroma_db/
+
+# Gradio
+.gradio/
+flagged/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
